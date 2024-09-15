@@ -1,173 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CosmicCoin (COS) - The Future of Cryptocurrency</title>
     <style>
-        /* Define colors and styles */
+        /* Global Styles */
         :root {
-            --primary-color: #6a1b9a;
-            --secondary-color: #9c27b0;
-            --accent-color: #ff9800;
+            --primary-color: #4a148c;
+            --secondary-color: #8e24aa;
             --text-color: #e0e0e0;
             --background-color: #121212;
-            --button-gradient: linear-gradient(45deg, #ff9800, #9c27b0);
-            --header-gradient: linear-gradient(90deg, #6a1b9a, #9c27b0);
+            --accent-color: #03dac6;
         }
 
-        /* Apply global styles */
         body {
-            font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: 'Roboto', sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
         }
 
-        /* Style header with a gradient */
+        /* Header and Navbar */
         header {
-            background: var(--header-gradient);
-            padding: 2rem 1rem;
-            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            color: #fff;
-            margin: 0;
-        }
-
-        /* Style navigation */
-        nav {
-            background-color: var(--secondary-color);
-            padding: 0.75rem 0;
+            font-size: 1.5rem;
         }
 
         nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            list-style: none;
         }
 
         nav ul li a {
             color: var(--text-color);
-            font-weight: bold;
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: var(--accent-color);
+            background-color: var(--secondary-color);
+            border-radius: 5px;
         }
 
-        /* Style main section */
+        /* Main Content */
         main {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 2rem auto;
+            padding: 1rem;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 2rem;
+            transition: transform 0.3s ease;
         }
 
-        h1, h2 {
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
             color: var(--accent-color);
-            text-transform: uppercase;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
         }
 
-        h3 {
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        p, ul {
-            line-height: 1.6;
-        }
-
-        /* Button styles */
         .cta-button {
             display: inline-block;
-            background: var(--button-gradient);
-            color: #fff;
+            background-color: var(--accent-color);
+            color: #000;
             padding: 0.75rem 1.5rem;
-            font-weight: bold;
-            border-radius: 30px;
             text-decoration: none;
-            transition: transform 0.3s ease, background 0.3s ease;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
         .cta-button:hover {
-            transform: scale(1.05);
-            background: linear-gradient(45deg, #9c27b0, #ff9800);
+            background-color: var(--secondary-color);
+            color: var(--text-color);
         }
 
-        /* Style footer */
+        /* Footer */
         footer {
             background-color: var(--primary-color);
-            color: var(--text-color);
             text-align: center;
             padding: 1rem;
-            position: relative;
+            color: var(--text-color);
+            position: sticky;
             bottom: 0;
             width: 100%;
         }
 
-        /* Responsive adjustments */
+        /* Responsive Design */
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
             nav ul {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.5rem;
+            }
+
+            main {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
-
 <body>
+    <!-- Header and Navbar -->
     <header>
-        <img src="/api/placeholder/100/100" alt="CosmicCoin Logo" width="100" height="100">
+        <img src="/api/placeholder/50/50" alt="CosmicCoin Logo">
         <h1>CosmicCoin (COS)</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#tokenomics">Tokenomics</a></li>
-            <li><a href="#roadmap">Roadmap</a></li>
-            <li><a href="#community">Community</a></li>
-        </ul>
-    </nav>
-
+    <!-- Main Content -->
     <main>
-        <section id="home">
+        <!-- Home Section -->
+        <div class="card" id="home">
             <h2>Welcome to CosmicCoin</h2>
             <p>Explore the future of decentralized finance with CosmicCoin (COS).</p>
             <a href="#" class="cta-button">Get Started</a>
             <a href="#" class="cta-button">Buy COS</a>
-        </section>
+        </div>
 
-        <section id="about">
+        <!-- About Section -->
+        <div class="card" id="about">
             <h2>About CosmicCoin</h2>
             <p>CosmicCoin is revolutionizing the cryptocurrency space by providing a secure, fast, and scalable blockchain solution for the future of finance.</p>
             <h3>Our Mission</h3>
             <p>To create a decentralized ecosystem that empowers individuals and businesses to take control of their financial future.</p>
-            <h3>Team</h3>
-            <ul>
-                <li>John Doe - CEO</li>
-                <li>Jane Smith - CTO</li>
-                <li>Mike Johnson - Head of Marketing</li>
-            </ul>
-            <h3>Partnerships</h3>
-            <ul>
-                <li>Galaxy Exchange</li>
-                <li>Nebula Wallet</li>
-                <li>Star Systems Inc.</li>
-            </ul>
-        </section>
+        </div>
 
-        <section id="tokenomics">
+        <!-- Tokenomics Section -->
+        <div class="card" id="tokenomics">
             <h2>Tokenomics</h2>
             <h3>Token Supply</h3>
             <p>Total Supply: 1,000,000,000 COS</p>
@@ -179,11 +185,10 @@
                 <li>10% - Ecosystem Development</li>
                 <li>5% - Reserve</li>
             </ul>
-            <h3>Fee Structure</h3>
-            <p>2% transaction fee: 1% redistributed to holders, 1% added to liquidity pool</p>
-        </section>
+        </div>
 
-        <section id="roadmap">
+        <!-- Roadmap Section -->
+        <div class="card" id="roadmap">
             <h2>Roadmap</h2>
             <h3>Short-term Goals (Q3 2024)</h3>
             <ul>
@@ -191,21 +196,10 @@
                 <li>List COS on major exchanges</li>
                 <li>Release mobile wallet app</li>
             </ul>
-            <h3>Mid-term Goals (Q4 2024 - Q2 2025)</h3>
-            <ul>
-                <li>Implement smart contract functionality</li>
-                <li>Launch decentralized exchange (DEX)</li>
-                <li>Establish partnerships with major retailers</li>
-            </ul>
-            <h3>Long-term Goals (Q3 2025 and beyond)</h3>
-            <ul>
-                <li>Develop CosmicCoin blockchain ecosystem</li>
-                <li>Implement cross-chain interoperability</li>
-                <li>Achieve mass adoption in e-commerce and DeFi sectors</li>
-            </ul>
-        </section>
+        </div>
 
-        <section id="community">
+        <!-- Community Section -->
+        <div class="card" id="community">
             <h2>Join Our Community</h2>
             <p>Stay connected with the CosmicCoin community:</p>
             <ul>
@@ -214,17 +208,12 @@
                 <li><a href="#">Discord</a></li>
                 <li><a href="#">Reddit</a></li>
             </ul>
-            <h3>Upcoming Events</h3>
-            <ul>
-                <li>CosmicCon 2024 - September 15, 2024</li>
-                <li>AMA with the CosmicCoin Team - Every Friday at 3 PM UTC</li>
-            </ul>
-        </section>
+        </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 CosmicCoin. All rights reserved.</p>
     </footer>
 </body>
-
 </html>
