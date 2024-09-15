@@ -6,139 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CosmicCoin (COS) - The Future of Cryptocurrency</title>
     <style>
+        
+
         /* Define colors and styles */
-:root {
-    --primary-color: #6a1b9a;
-    --secondary-color: #9c27b0;
-    --accent-color: #ff9800;
-    --text-color: #e0e0e0;
-    --background-color: #121212;
-    --button-gradient: linear-gradient(45deg, #ff9800, #9c27b0);
-    --header-gradient: linear-gradient(90deg, #6a1b9a, #9c27b0);
-}
+        :root {
+            --primary-color: #6a1b9a;
+            --secondary-color: #9c27b0;
+            --accent-color: #ff9800;
+            --text-color: #e0e0e0;
+            --background-color: #121212;
+            --button-gradient: linear-gradient(45deg, #ff9800, #9c27b0);
+            --header-gradient: linear-gradient(90deg, #6a1b9a, #9c27b0);
+        }
 
-/* Apply global styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
+        /* Apply global styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
 
-/* Style header with a gradient */
-header {
-    background: var(--header-gradient);
-    padding: 2rem 1rem;
-    text-align: center;
-}
+        /* Style header with a gradient */
+        header {
+            background: var(--header-gradient);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin: 0;
-}
+        header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 0;
+        }
 
-/* Style navigation */
-nav {
-    background-color: var(--secondary-color);
-    padding: 0.75rem 0;
-}
+        /* Style navigation */
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.75rem 0;
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+            /* Mobile Styles */
+    @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+        }
 
-nav ul li a {
-    color: var(--text-color);
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
 
-nav ul li a:hover {
-    color: var(--accent-color);
-}
+        nav ul li a {
+            color: var(--text-color);
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-/* Style main section */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
 
-h1, h2 {
-    color: var(--accent-color);
-    text-transform: uppercase;
-}
+        /* Style main section */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-h3 {
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-}
+        h1, h2 {
+            color: var(--accent-color);
+            text-transform: uppercase;
+        }
 
-p, ul {
-    line-height: 1.6;
-}
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
 
-/* Button styles */
-.cta-button {
-    display: inline-block;
-    background: var(--button-gradient);
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
+        p, ul {
+            line-height: 1.6;
+        }
 
-.cta-button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(45deg, #9c27b0, #ff9800);
-}
+        /* Button styles */
+        .cta-button {
+            display: inline-block;
+            background: var(--button-gradient);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
 
-/* Style footer */
-footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #9c27b0, #ff9800);
+        }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
+        /* Style footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
 
-    .header-content {
-        flex-direction: column;
-    }
-
-    main {
-        padding: 1rem;
-    }
-
-    h1, h2 {
-        font-size: 2rem;
-    }
-
-    .cta-button {
-        width: 100%;
-        text-align: center;
-    }
-}
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
 
     </style>
 </head>
