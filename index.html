@@ -237,66 +237,68 @@
                <div class="card" id="tokenomics">
 
         <div class="bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto">
-  <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">CosmicCoin (COS) Tokenomics</h2>
+  <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">Cosmic Coin (COS) Tokenomics</h2>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-    <div>
-      <h3 class="text-2xl font-semibold mb-4 text-gray-800">Token Allocation</h3>
-      <div class="relative w-64 h-64 mx-auto">
-        <!-- Pie chart segments -->
-        <div class="absolute inset-0 bg-blue-500 rounded-full"></div>
-        <div class="absolute inset-0 bg-green-500 rounded-full" style="clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 50% 100%);"></div>
-        <div class="absolute inset-0 bg-yellow-500 rounded-full" style="clip-path: polygon(50% 50%, 100% 0, 100% 33%, 50% 33%);"></div>
-        <div class="absolute inset-0 bg-red-500 rounded-full" style="clip-path: polygon(50% 50%, 100% 0, 100% 13%, 50% 13%);"></div>
-        <div class="absolute inset-0 bg-purple-500 rounded-full" style="clip-path: polygon(50% 50%, 100% 0, 100% 8%, 50% 8%);"></div>
-        <div class="absolute inset-0 bg-pink-500 rounded-full" style="clip-path: polygon(50% 50%, 100% 0, 100% 5%, 50% 5%);"></div>
-        <div class="absolute inset-0 bg-gray-500 rounded-full" style="clip-path: polygon(50% 50%, 100% 0, 100% 3%, 50% 3%);"></div>
-      </div>
+    <div class="bg-gray-100 p-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-2 text-gray-700">Total Supply</h3>
+      <p class="text-2xl font-bold text-blue-600">250,000,000 COS</p>
     </div>
-    <div>
-      <h3 class="text-2xl font-semibold mb-4 text-gray-800">Allocation Categories</h3>
-      <ul class="space-y-2">
-        <li class="flex items-center"><span class="w-4 h-4 bg-blue-500 rounded-full mr-2"></span> Airdrop: 50% (5,000,000 COS)</li>
-        <li class="flex items-center"><span class="w-4 h-4 bg-green-500 rounded-full mr-2"></span> Liquidity: 33.33% (3,333,000 COS)</li>
-        <li class="flex items-center"><span class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></span> Team: 10% (1,000,000 COS)</li>
-        <li class="flex items-center"><span class="w-4 h-4 bg-red-500 rounded-full mr-2"></span> Treasury: 3% (300,000 COS)</li>
-        <li class="flex items-center"><span class="w-4 h-4 bg-purple-500 rounded-full mr-2"></span> Investors: 2% (200,000 COS)</li>
-        <li class="flex items-center"><span class="w-4 h-4 bg-pink-500 rounded-full mr-2"></span> Advisors: 1% (100,000 COS)</li>
-        <li class="flex items-center"><span class="w-4 h-4 bg-gray-500 rounded-full mr-2"></span> Reserved: 0.67% (67,000 COS)</li>
-      </ul>
+    <div class="bg-gray-100 p-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-2 text-gray-700">Initial Token Allocation</h3>
+      <p class="text-2xl font-bold text-green-600">10,000,000 COS</p>
+      <p class="text-sm text-gray-600">(4% of Total Supply)</p>
     </div>
   </div>
 
-  <div class="mt-12">
-    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Token Release Schedule</h3>
-    <div class="relative h-64 bg-gray-100 rounded-lg">
-      <!-- Line graph -->
-      <div class="absolute bottom-0 left-0 w-full h-full flex items-end">
-        <div class="w-1/6 h-1/5 bg-blue-500"></div>
-        <div class="w-1/6 h-2/5 bg-blue-500"></div>
-        <div class="w-1/6 h-3/5 bg-blue-500"></div>
-        <div class="w-1/6 h-4/5 bg-blue-500"></div>
-        <div class="w-1/6 h-full bg-blue-500"></div>
-        <div class="w-1/6 h-full bg-blue-500"></div>
-      </div>
-      <!-- X-axis labels -->
-      <div class="absolute bottom-0 left-0 w-full flex justify-between text-xs text-gray-600 px-2">
-        <span>TGE</span>
-        <span>Q1</span>
-        <span>Q2</span>
-        <span>Q3</span>
-        <span>Q4</span>
-        <span>Q5</span>
-      </div>
-      <!-- Y-axis labels -->
-      <div class="absolute top-0 left-0 h-full flex flex-col justify-between text-xs text-gray-600 py-2">
-        <span>100%</span>
-        <span>75%</span>
-        <span>50%</span>
-        <span>25%</span>
-        <span>0%</span>
-      </div>
-    </div>
+  <h3 class="text-2xl font-semibold mb-4 text-gray-800">Token Distribution</h3>
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="py-2 px-4 text-left">Category</th>
+          <th class="py-2 px-4 text-left">Percentage</th>
+          <th class="py-2 px-4 text-left">Token Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="py-2 px-4 border-b">Airdrop</td>
+          <td class="py-2 px-4 border-b">50%</td>
+          <td class="py-2 px-4 border-b">5,000,000 COS</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 border-b">Liquidity</td>
+          <td class="py-2 px-4 border-b">33.33%</td>
+          <td class="py-2 px-4 border-b">3,333,000 COS</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 border-b">Team</td>
+          <td class="py-2 px-4 border-b">10%</td>
+          <td class="py-2 px-4 border-b">1,000,000 COS</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 border-b">Treasury</td>
+          <td class="py-2 px-4 border-b">3%</td>
+          <td class="py-2 px-4 border-b">300,000 COS</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 border-b">Investors</td>
+          <td class="py-2 px-4 border-b">2%</td>
+          <td class="py-2 px-4 border-b">200,000 COS</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 border-b">Advisors</td>
+          <td class="py-2 px-4 border-b">1%</td>
+          <td class="py-2 px-4 border-b">100,000 COS</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4">Reserved</td>
+          <td class="py-2 px-4">0.67%</td>
+          <td class="py-2 px-4">67,000 COS</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="mt-8">
