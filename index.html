@@ -4,23 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
- <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ES3NKKYCS7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-ES3NKKYCS7');
-  </script>
-
     <title>CosmicCoin (COS) - The Future of Cryptocurrency</title>
-    <style>
-        
 
-        /* Define colors and styles */
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ES3NKKYCS7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ES3NKKYCS7');
+    </script>
+
+    <!-- Add Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
         :root {
             --primary-color: #6a1b9a;
             --secondary-color: #9c27b0;
@@ -31,16 +29,21 @@
             --header-gradient: linear-gradient(90deg, #6a1b9a, #9c27b0);
         }
 
-        /* Apply global styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
+            line-height: 1.6;
         }
 
-        /* Style header with a gradient */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
         header {
             background: var(--header-gradient);
             padding: 2rem 1rem;
@@ -53,7 +56,6 @@
             margin: 0;
         }
 
-        /* Style navigation */
         nav {
             background-color: var(--secondary-color);
             padding: 0.75rem 0;
@@ -67,12 +69,6 @@
             justify-content: center;
             gap: 1.5rem;
         }
-            /* Mobile Styles */
-    @media (max-width: 768px) {
-        .header-content {
-            flex-direction: column;
-        }
-
 
         nav ul li a {
             color: var(--text-color);
@@ -85,11 +81,17 @@
             color: var(--accent-color);
         }
 
-        /* Style main section */
         main {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
         }
 
         h1, h2 {
@@ -106,7 +108,6 @@
             line-height: 1.6;
         }
 
-        /* Button styles */
         .cta-button {
             display: inline-block;
             background: var(--button-gradient);
@@ -123,7 +124,6 @@
             background: linear-gradient(45deg, #9c27b0, #ff9800);
         }
 
-        /* Style footer */
         footer {
             background-color: var(--primary-color);
             color: var(--text-color);
@@ -134,93 +134,71 @@
             width: 100%;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
-                gap: 1rem;
+                align-items: center;
+            }
+
+            .card {
+                padding: 1rem;
             }
         }
-
     </style>
 </head>
 
 <body>
-    <header class="header">
-    <div class="container header-content">
-        
-        <h1 class="title">CosmicCoin (COS)</h1>
-    </div>
-</header>
-
-<nav class="navbar">
-    <div class="container">
-        <div class="menu-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <header>
+        <div class="container">
+            <h1>CosmicCoin (COS)</h1>
         </div>
-        <ul class="nav-list" id="nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#tokenomics">Tokenomics</a></li>
-            <li><a href="#roadmap">Roadmap</a></li>
-            <li><a href="#community">Community</a></li>
-        </ul>
-    </div>
-</nav>
+    </header>
 
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main>
-        
-            <!-- Home Section -->
-      <div class="card" id="home">
-            
+        <section id="home" class="card">
             <h2>Welcome to CosmicCoin</h2>
             <p>Explore the future of decentralized finance with CosmicCoin (COS).</p>
             <a href="https://bscscan.com/token/0x28d1381763b151cc66b5a84ab169e3ec8125055d" class="cta-button">Get Started</a>
             <a href="#" class="cta-button">Buy COS</a>
         </section>
 
-        
-            <!-- About Section -->
-       <div class="card" id="about">
-            
-            
+        <section id="about" class="card">
+            <h2>About CosmicCoin</h2>
+            <p>CosmicCoin (COS) is revolutionizing the cryptocurrency space by providing a secure, fast, and scalable blockchain solution for the future of finance. Built on the BNB Smart Chain (BSC), COS offers a deflationary tokenomics model, community-driven growth, and a robust ecosystem for decentralized applications.</p>
 
+            <h3>Our Mission</h3>
+            <p>To create a decentralized ecosystem that empowers individuals and businesses to take control of their financial future, fostering innovation, security, and prosperity through:</p>
+            <ul>
+                <li>Community-driven decision-making</li>
+                <li>Transparent and secure transactions</li>
+                <li>Scalable and efficient blockchain technology</li>
+                <li>Education and adoption initiatives</li>
+                <li>Strategic partnerships and collaborations</li>
+            </ul>
 
-<h2>About CosmicCoin</h2>
+            <h3>Our Vision</h3>
+            <p>To become a leading cryptocurrency platform, recognized for its:</p>
+            <ul>
+                <li>Decentralized governance</li>
+                <li>Advanced security measures</li>
+                <li>High-performance scalability</li>
+                <li>Inclusive community engagement</li>
+                <li>Sustainable ecosystem growth</li>
+            </ul>
 
-<p>CosmicCoin (COS) is revolutionizing the cryptocurrency space by providing a secure, fast, and scalable blockchain solution for the future of finance. Built on the BNB Smart Chain (BSC), COS offers a deflationary tokenomics model, community-driven growth, and a robust ecosystem for decentralized applications.</p>
-
-
-<h3>Our Mission</h3>
-
-<p>To create a decentralized ecosystem that empowers individuals and businesses to take control of their financial future, fostering innovation, security, and prosperity through:</p>
-
-<ul>
-<li>Community-driven decision-making</li>
-<li>Transparent and secure transactions</li>
-<li>Scalable and efficient blockchain technology</li>
-<li>Education and adoption initiatives</li>
-<li>Strategic partnerships and collaborations</li>
-</ul>
-
-
-<h3>Our Vision</h3>
-
-<p>To become a leading cryptocurrency platform, recognized for its:</p>
-
-<ul>
-<li>Decentralized governance</li>
-<li>Advanced security measures</li>
-<li>High-performance scalability</li>
-<li>Inclusive community engagement</li>
-<li>Sustainable ecosystem growth</li>
-</ul>
-
-
- <h3>Team</h3>
+            <h3>Team</h3>
             <ul>
                 <li>Miracleharbor - CEO</li>
                 <li>Mirak Oracle - CTO</li>
@@ -228,167 +206,133 @@
                 <li>I-diya - CAO</li>
                 <li>Sodiya - CPO</li>
             </ul>
+
             <h3>Partnerships</h3>
-
-<p>We're proud to collaborate with leading blockchain companies to drive innovation and adoption.</p>
-
-            </ul>
-        <!-- Tokenomics Section -->
-               <div class="card" id="tokenomics">
-
-        <div class="bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto">
-  <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">Cosmic Coin (COS) Tokenomics</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-    <div class="bg-gray-100 p-4 rounded-lg">
-      <h3 class="text-xl font-semibold mb-2 text-gray-700">Total Supply</h3>
-      <p class="text-2xl font-bold text-blue-600">250,000,000 COS</p>
-    </div>
-    <div class="bg-gray-100 p-4 rounded-lg">
-      <h3 class="text-xl font-semibold mb-2 text-gray-700">Initial Token Allocation</h3>
-      <p class="text-2xl font-bold text-green-600">10,000,000 COS</p>
-      <p class="text-sm text-gray-600">(4% of Total Supply)</p>
-    </div>
-  </div>
-
-  <h3 class="text-2xl font-semibold mb-4 text-gray-800">Token Distribution</h3>
-  <div class="overflow-x-auto">
-    <table class="min-w-full bg-white">
-      <thead class="bg-gray-200">
-        <tr>
-          <th class="py-2 px-4 text-left">Category</th>
-          <th class="py-2 px-4 text-left">Percentage</th>
-          <th class="py-2 px-4 text-left">Token Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="py-2 px-4 border-b">Airdrop</td>
-          <td class="py-2 px-4 border-b">50%</td>
-          <td class="py-2 px-4 border-b">5,000,000 COS</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 border-b">Liquidity</td>
-          <td class="py-2 px-4 border-b">33.33%</td>
-          <td class="py-2 px-4 border-b">3,333,000 COS</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 border-b">Team</td>
-          <td class="py-2 px-4 border-b">10%</td>
-          <td class="py-2 px-4 border-b">1,000,000 COS</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 border-b">Treasury</td>
-          <td class="py-2 px-4 border-b">3%</td>
-          <td class="py-2 px-4 border-b">300,000 COS</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 border-b">Investors</td>
-          <td class="py-2 px-4 border-b">2%</td>
-          <td class="py-2 px-4 border-b">200,000 COS</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 border-b">Advisors</td>
-          <td class="py-2 px-4 border-b">1%</td>
-          <td class="py-2 px-4 border-b">100,000 COS</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4">Reserved</td>
-          <td class="py-2 px-4">0.67%</td>
-          <td class="py-2 px-4">67,000 COS</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  
-
-  <div class="mt-8">
-    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Token Utility</h3>
-    <ul class="list-disc pl-6 space-y-2">
-      <li>Governance: COS holders can participate in decision-making processes</li>
-      <li>Staking: Earn rewards by locking up COS tokens</li>
-      <li>Transaction fees: Reduced fees for COS holders on our platform</li>
-      <li>Access to premium features: Unlock exclusive content and services</li>
-    </ul>
-  </div>
-</div>
-
-<h3>Fee Structure</h3>
-
-<p>A transaction fee is applied to buy and sell transactions, with a portion redistributed to holders and added to the liquidity pool.</p>
-
- </section>
-
-        
-            <!-- Roadmap Section -->
-       <div class="card" id="roadmap">
-           
-            
-
-
-<h2>Roadmap</h2>
-
-
-<h3>Short-term Goals (Q3 2024)</h3>
-
-<p>Foundation and Growth</p>
-
-<ul>
-<li>Launch CosmicCoin mainnet on BNB Smart Chain (BSC)</li>
-<li>CosmicCon Galaxy Airdrop</li>
-<li>List COS on PancakeSwap and other major DEXs</li>
-<li>Release mobile wallet app for Android and iOS</li>
-<li>Establish community engagement and support channels</li>
-</ul>
-
-
-<h3>Mid-term Goals (Q4 2024 - Q2 2025)</h3>
-
-<p>Expansion and Development</p>
-
-<ul>
-<li>Implement smart contract functionality for decentralized applications (dApps)</li>
-<li>Launch CosmicCoin decentralized exchange (DEX)</li>
-<li>Establish partnerships with major retailers and e-commerce platforms</li>
-<li>Integrate CosmicCoin with popular payment gateways</li>
-</ul>
-
-
-<h3>Long-term Goals (Q3 2025 and beyond)</h3>
-
-<p>Mass Adoption and Ecosystem Growth</p>
-
-<ul>
-<li>Develop CosmicCoin blockchain ecosystem with decentralized finance (DeFi) solutions</li>
-<li>Implement cross-chain interoperability with Ethereum, Polygon, and other blockchains</li>
-<li>Achieve mass adoption in e-commerce, DeFi, and gaming sectors</li>
-<li>Continuously improve security, scalability, and usability</li>
-</ul>
-
-
-   </ul>
+            <p>We're proud to collaborate with leading blockchain companies to drive innovation and adoption.</p>
         </section>
 
-        <!-- Community Section -->
-            <div class="card" id="community">
+        <section id="tokenomics" class="card">
+            <h2>Cosmic Coin (COS) Tokenomics</h2>
+            <div class="grid">
+                <div>
+                    <h3>Total Supply</h3>
+                    <p class="highlight">250,000,000 COS</p>
+                </div>
+                <div>
+                    <h3>Initial Token Allocation</h3>
+                    <p class="highlight">10,000,000 COS</p>
+                    <p>(4% of Total Supply)</p>
+                </div>
+            </div>
+
+            <h3>Token Distribution</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Percentage</th>
+                        <th>Token Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Airdrop</td>
+                        <td>50%</td>
+                        <td>5,000,000 COS</td>
+                    </tr>
+                    <tr>
+                        <td>Liquidity</td>
+                        <td>33.33%</td>
+                        <td>3,333,000 COS</td>
+                    </tr>
+                    <tr>
+                        <td>Team</td>
+                        <td>10%</td>
+                        <td>1,000,000 COS</td>
+                    </tr>
+                    <tr>
+                        <td>Treasury</td>
+                        <td>3%</td>
+                        <td>300,000 COS</td>
+                    </tr>
+                    <tr>
+                        <td>Investors</td>
+                        <td>2%</td>
+                        <td>200,000 COS</td>
+                    </tr>
+                    <tr>
+                        <td>Advisors</td>
+                        <td>1%</td>
+                        <td>100,000 COS</td>
+                    </tr>
+                    <tr>
+                        <td>Reserved</td>
+                        <td>0.67%</td>
+                        <td>67,000 COS</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Token Utility</h3>
+            <ul>
+                <li>Governance: COS holders can participate in decision-making processes</li>
+                <li>Staking: Earn rewards by locking up COS tokens</li>
+                <li>Transaction fees: Reduced fees for COS holders on our platform</li>
+                <li>Access to premium features: Unlock exclusive content and services</li>
+            </ul>
+
+            <h3>Fee Structure</h3>
+            <p>A transaction fee is applied to buy and sell transactions, with a portion redistributed to holders and added to the liquidity pool.</p>
+        </section>
+
+        <section id="roadmap" class="card">
+            <h2>Roadmap</h2>
+
+            <h3>Short-term Goals (Q3 2024)</h3>
+            <p>Foundation and Growth</p>
+            <ul>
+                <li>Launch CosmicCoin mainnet on BNB Smart Chain (BSC)</li>
+                <li>CosmicCon Galaxy Airdrop</li>
+                <li>List COS on PancakeSwap and other major DEXs</li>
+                <li>Release mobile wallet app for Android and iOS</li>
+                <li>Establish community engagement and support channels</li>
+            </ul>
+
+            <h3>Mid-term Goals (Q4 2024 - Q2 2025)</h3>
+            <p>Expansion and Development</p>
+            <ul>
+                <li>Implement smart contract functionality for decentralized applications (dApps)</li>
+                <li>Launch CosmicCoin decentralized exchange (DEX)</li>
+                <li>Establish partnerships with major retailers and e-commerce platforms</li>
+                <li>Integrate CosmicCoin with popular payment gateways</li>
+            </ul>
+
+            <h3>Long-term Goals (Q3 2025 and beyond)</h3>
+            <p>Mass Adoption and Ecosystem Growth</p>
+            <ul>
+                <li>Develop CosmicCoin blockchain ecosystem with decentralized finance (DeFi) solutions</li>
+                <li>Implement cross-chain interoperability with Ethereum, Polygon, and other blockchains</li>
+                <li>Achieve mass adoption in e-commerce, DeFi, and gaming sectors</li>
+                <li>Continuously improve security, scalability, and usability</li>
+            </ul>
+        </section>
+
+        <section id="community" class="card">
             <h2>Join Our Community</h2>
             <p>Stay connected with the CosmicCoin community:</p>
             <ul>
                 <li><a href="https://www.x.com/MirakleGroup">Twitter</a></li>
                 <li><a href="https://t.me/CosmicCoin11">Telegram</a></li>
                 <li><a href="https://discord.com/invite/vBa8f2Pa">Discord</a></li>
-                
             </ul>
             <h3>Upcoming Events</h3>
             <ul>
                 <li>Stay tuned for CosmicCoin (COS) updates!</li>
-                <li>Get ready for a journey to the cosmos!
-
-<li>For inquiries, partnerships, or more information, email us at:
-    <a href="mailto:Info.Cosmic.cos@gmail.com">Info.Cosmic.cos@gmail.com</a>
-</li>
-</ul>
+                <li>Get ready for a journey to the cosmos!</li>
+                <li>For inquiries, partnerships, or more information, email us at:
+                    <a href="mailto:Info.Cosmic.cos@gmail.com">Info.Cosmic.cos@gmail.com</a>
+                </li>
+            </ul>
         </section>
     </main>
 
@@ -397,4 +341,4 @@
     </footer>
 </body>
 
-</html>
+                    </html>
