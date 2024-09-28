@@ -18,328 +18,328 @@
     <!-- Add Poppins font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6a1b9a',
+                        secondary: '#9c27b0',
+                        accent: '#ff9800',
+                        background: '#121212',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
     <style>
-        :root {
-            --primary-color: #6a1b9a;
-            --secondary-color: #9c27b0;
-            --accent-color: #ff9800;
-            --text-color: #e0e0e0;
-            --background-color: #121212;
-            --button-gradient: linear-gradient(45deg, #ff9800, #9c27b0);
-            --header-gradient: linear-gradient(90deg, #6a1b9a, #9c27b0);
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
         }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        header {
-            background: var(--header-gradient);
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #fff;
-            margin: 0;
-        }
-
-        nav {
-            background-color: var(--secondary-color);
-            padding: 0.75rem 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        nav ul li a {
-            color: var(--text-color);
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .card {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        h1, h2 {
-            color: var(--accent-color);
-            text-transform: uppercase;
-        }
-
-        h3 {
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        p, ul {
-            line-height: 1.6;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--button-gradient);
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            font-weight: bold;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            background: linear-gradient(45deg, #9c27b0, #ff9800);
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            text-align: center;
-            padding: 1rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .card {
-                padding: 1rem;
-            }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
         }
     </style>
 </head>
 
-<body>
-    <header>
-        <div class="container">
-            <h1>CosmicCoin (COS)</h1>
+<body class="font-poppins bg-background text-gray-200 min-h-screen flex flex-col">
+    <header class="bg-gradient-to-r from-primary to-secondary py-8 px-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <h1 class="text-4xl font-bold text-white">CosmicCoin (COS)</h1>
+            <svg class="w-12 h-12 text-accent float-animation" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 011-1h1V7a1 1 0 012 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1H8a1 1 0 01-1-1z"></path>
+            </svg>
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#tokenomics">Tokenomics</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#community">Community</a></li>
+    <nav class="bg-secondary py-4 sticky top-0 z-10">
+        <div class="container mx-auto">
+            <ul class="flex flex-wrap justify-center space-x-6">
+                <li><a href="#home" class="text-white hover:text-accent transition-colors">Home</a></li>
+                <li><a href="#about" class="text-white hover:text-accent transition-colors">About</a></li>
+                <li><a href="#tokenomics" class="text-white hover:text-accent transition-colors">Tokenomics</a></li>
+                <li><a href="#roadmap" class="text-white hover:text-accent transition-colors">Roadmap</a></li>
+                <li><a href="#community" class="text-white hover:text-accent transition-colors">Community</a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
-        <section id="home" class="card">
-            <h2>Welcome to CosmicCoin</h2>
-            <p>Explore the future of decentralized finance with CosmicCoin (COS).</p>
-            <a href="https://bscscan.com/token/0x28d1381763b151cc66b5a84ab169e3ec8125055d" class="cta-button">Get Started</a>
-            <a href="#" class="cta-button">Buy COS</a>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <section id="home" class="bg-gray-800 rounded-lg p-8 mb-8 shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <h2 class="text-3xl font-bold text-accent mb-4">Welcome to CosmicCoin</h2>
+            <p class="mb-6">Explore the future of decentralized finance with CosmicCoin (COS).</p>
+            <div class="flex space-x-4">
+                <a href="https://bscscan.com/token/0x28d1381763b151cc66b5a84ab169e3ec8125055d" class="bg-gradient-to-r from-accent to-secondary text-white font-bold py-2 px-4 rounded-full hover:from-secondary hover:to-accent transition-all duration-300">Get Started</a>
+                <a href="#" class="bg-gradient-to-r from-accent to-secondary text-white font-bold py-2 px-4 rounded-full hover:from-secondary hover:to-accent transition-all duration-300">Buy COS</a>
+            </div>
         </section>
 
-        <section id="about" class="card">
-            <h2>About CosmicCoin</h2>
-            <p>CosmicCoin (COS) is revolutionizing the cryptocurrency space by providing a secure, fast, and scalable blockchain solution for the future of finance. Built on the BNB Smart Chain (BSC), COS offers a deflationary tokenomics model, community-driven growth, and a robust ecosystem for decentralized applications.</p>
+        <section id="about" class="bg-gray-800 rounded-lg p-8 mb-8 shadow-lg">
+            <h2 class="text-3xl font-bold text-accent mb-4">About CosmicCoin</h2>
+            <p class="mb-6">CosmicCoin (COS) is revolutionizing the cryptocurrency space by providing a secure, fast, and scalable blockchain solution for the future of finance. Built on the BNB Smart Chain (BSC), COS offers a deflationary tokenomics model, community-driven growth, and a robust ecosystem for decentralized applications.</p>
 
-            <h3>Our Mission</h3>
-            <p>To create a decentralized ecosystem that empowers individuals and businesses to take control of their financial future, fostering innovation, security, and prosperity through:</p>
-            <ul>
-                <li>Community-driven decision-making</li>
-                <li>Transparent and secure transactions</li>
-                <li>Scalable and efficient blockchain technology</li>
-                <li>Education and adoption initiatives</li>
-                <li>Strategic partnerships and collaborations</li>
-            </ul>
-
-            <h3>Our Vision</h3>
-            <p>To become a leading cryptocurrency platform, recognized for its:</p>
-            <ul>
-                <li>Decentralized governance</li>
-                <li>Advanced security measures</li>
-                <li>High-performance scalability</li>
-                <li>Inclusive community engagement</li>
-                <li>Sustainable ecosystem growth</li>
-            </ul>
-
-            <h3>Team</h3>
-            <ul>
-                <li>Miracleharbor - CEO</li>
-                <li>Mirak Oracle - CTO</li>
-                <li>Miky - Head of Marketing</li>
-                <li>I-diya - CAO</li>
-                <li>Sodiya - CPO</li>
-                <li>Dolippy - Advisor</li>
-            </ul>
-
-            <h3>Partnerships</h3>
-            <p>We're proud to collaborate with leading blockchain companies to drive innovation and adoption.</p>
-        </section>
-
-        <section id="tokenomics" class="card">
-            <h2>Cosmic Coin (COS) Tokenomics</h2>
-            <div class="grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <h3>Total Supply</h3>
-                    <p class="highlight">250,000,000 COS</p>
+                    <h3 class="text-2xl font-semibold text-secondary mb-4">Our Mission</h3>
+                    <p class="mb-4">To create a decentralized ecosystem that empowers individuals and businesses to take control of their financial future, fostering innovation, security, and prosperity through:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Community-driven decision-making</li>
+                        <li>Transparent and secure transactions</li>
+                        <li>Scalable and efficient blockchain technology</li>
+                        <li>Education and adoption initiatives</li>
+                        <li>Strategic partnerships and collaborations</li>
+                    </ul>
                 </div>
                 <div>
-                    <h3>Initial Token Allocation</h3>
-                    <p class="highlight">10,000,000 COS</p>
-                    <p>(4% of Total Supply)</p>
+                    <h3 class="text-2xl font-semibold text-secondary mb-4">Our Vision</h3>
+                    <p class="mb-4">To become a leading cryptocurrency platform, recognized for its:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Decentralized governance</li>
+                        <li>Advanced security measures</li>
+                        <li>High-performance scalability</li>
+                        <li>Inclusive community engagement</li>
+                        <li>Sustainable ecosystem growth</li>
+                    </ul>
                 </div>
             </div>
 
-            <h3>Token Distribution</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Percentage</th>
-                        <th>Token Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Airdrop</td>
-                        <td>50%</td>
-                        <td>5,000,000 COS</td>
-                    </tr>
-                    <tr>
-                        <td>Liquidity</td>
-                        <td>33.33%</td>
-                        <td>3,333,000 COS</td>
-                    </tr>
-                    <tr>
-                        <td>Team</td>
-                        <td>10%</td>
-                        <td>1,000,000 COS</td>
-                    </tr>
-                    <tr>
-                        <td>Treasury</td>
-                        <td>3%</td>
-                        <td>300,000 COS</td>
-                    </tr>
-                    <tr>
-                        <td>Investors</td>
-                        <td>2%</td>
-                        <td>200,000 COS</td>
-                    </tr>
-                    <tr>
-                        <td>Advisors</td>
-                        <td>1%</td>
-                        <td>100,000 COS</td>
-                    </tr>
-                    <tr>
-                        <td>Reserved</td>
-                        <td>0.67%</td>
-                        <td>67,000 COS</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h3 class="text-2xl font-semibold text-secondary mt-8 mb-4">Team</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <svg class="w-12 h-12 text-accent mb-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="font-semibold">Miracleharbor - CEO</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <svg class="w-12 h-12 text-accent mb-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="font-semibold">Mirak Oracle - CTO</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <svg class="w-12 h-12 text-accent mb-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="font-semibold">Miky - Head of Marketing</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <svg class="w-12 h-12 text-accent mb-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="font-semibold">I-diya - CAO</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <svg class="w-12 h-12 text-accent mb-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="font-semibold">Sodiya - CPO</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <svg class="w-12 h-12 text-accent mb-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="font-semibold">Dolippy - Advisor</p>
+                </div>
+            </div>
 
-            <h3>Token Utility</h3>
-            <ul>
+            <h3 class="text-2xl font-semibold text-secondary mt-8 mb-4">Partnerships</h3>
+            <p>We're proud to collaborate with leading blockchain companies to drive innovation and adoption.</p>
+        </section>
+
+        <section id="tokenomics" class="bg-gray-800 rounded-lg p-8 mb-8 shadow-lg">
+            <h2 class="text-3xl font-bold text-accent mb-4">Cosmic Coin (COS) Tokenomics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-secondary mb-2">Total Supply</h3>
+                    <p class="text-4xl font-bold text-accent">250,000,000 COS</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-secondary mb-2">Initial Token Allocation</h3>
+                    <p class="text-4xl font-bold text-accent">10,000,000 COS</p>
+                    <p class="text-sm">(4% of Total Supply)</p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-secondary mb-4">Token Distribution</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-700">
+                            <th class="p-3">Category</th>
+                            <th class="p-3">Percentage</th>
+                            <th class="p-3">Token Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-3">Airdrop</td>
+                            <td class="p-3">50%</td>
+                            <td class="p-3">5,000,000 COS</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-3">Liquidity</td>
+                            <td class="p-3">33.33%</td>
+                            <td class="p-3">3,333,000 COS</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-3">Team</td>
+                            <td class="p-3">10%</td>
+                            <td class="p-3">1,000,000 COS</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-3">Treasury</td>
+                            <td class="p-3">3%</td>
+                            <td class="p-3">300,000 COS</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-3">Investors</td>
+                            <td class="p-3">2%</td>
+                            <td class="p-3">200,000 COS</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-3">Advisors</td>
+                            <td class="p-3">1%</td>
+                            <td class="p-3">100,000 COS</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">Reserved</td>
+                            <td class="p-3">0.67%</td>
+                            <td class="p-3">67,000 COS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-secondary mt-8 mb-4">Token Utility</h3>
+            <ul class="list-disc list-inside space-y-2">
                 <li>Governance: COS holders can participate in decision-making processes</li>
-                <li>Staking: Earn rewards by locking up COS tokens</li>
+                <li>Staking: Earn rewards by l
+
+ocking up COS tokens</li>
                 <li>Transaction fees: Reduced fees for COS holders on our platform</li>
                 <li>Access to premium features: Unlock exclusive content and services</li>
             </ul>
 
-            <h3>Fee Structure</h3>
+            <h3 class="text-2xl font-semibold text-secondary mt-8 mb-4">Fee Structure</h3>
             <p>A transaction fee is applied to buy and sell transactions, with a portion redistributed to holders and added to the liquidity pool.</p>
         </section>
 
-        <section id="roadmap" class="card">
-            <h2>Roadmap</h2>
+        <section id="roadmap" class="bg-gray-800 rounded-lg p-8 mb-8 shadow-lg">
+            <h2 class="text-3xl font-bold text-accent mb-4">Roadmap</h2>
 
-            <h3>Short-term Goals (Q3 2024)</h3>
-            <p>Foundation and Growth</p>
-            <ul>
-                <li>Launch CosmicCoin mainnet on BNB Smart Chain (BSC)</li>
-                <li>CosmicCon Galaxy Airdrop</li>
-                <li>List COS on PancakeSwap and other major DEXs</li>
-                <li>Release mobile wallet app for Android and iOS</li>
-                <li>Establish community engagement and support channels</li>
-            </ul>
+            <div class="space-y-8">
+                <div class="relative pl-8 border-l-2 border-accent">
+                    <div class="absolute w-4 h-4 bg-accent rounded-full -left-[9px] top-1"></div>
+                    <h3 class="text-2xl font-semibold text-secondary mb-2">Short-term Goals (Q3 2024)</h3>
+                    <p class="font-semibold mb-2">Foundation and Growth</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Launch CosmicCoin mainnet on BNB Smart Chain (BSC)</li>
+                        <li>CosmicCon Galaxy Airdrop</li>
+                        <li>List COS on PancakeSwap and other major DEXs</li>
+                        <li>Release mobile wallet app for Android and iOS</li>
+                        <li>Establish community engagement and support channels</li>
+                    </ul>
+                </div>
 
-            <h3>Mid-term Goals (Q4 2024 - Q2 2025)</h3>
-            <p>Expansion and Development</p>
-            <ul>
-                <li>Implement smart contract functionality for decentralized applications (dApps)</li>
-                <li>Launch CosmicCoin decentralized exchange (DEX)</li>
-                <li>Establish partnerships with major retailers and e-commerce platforms</li>
-                <li>Integrate CosmicCoin with popular payment gateways</li>
-            </ul>
+                <div class="relative pl-8 border-l-2 border-accent">
+                    <div class="absolute w-4 h-4 bg-accent rounded-full -left-[9px] top-1"></div>
+                    <h3 class="text-2xl font-semibold text-secondary mb-2">Mid-term Goals (Q4 2024 - Q2 2025)</h3>
+                    <p class="font-semibold mb-2">Expansion and Development</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Implement smart contract functionality for decentralized applications (dApps)</li>
+                        <li>Launch CosmicCoin decentralized exchange (DEX)</li>
+                        <li>Establish partnerships with major retailers and e-commerce platforms</li>
+                        <li>Integrate CosmicCoin with popular payment gateways</li>
+                    </ul>
+                </div>
 
-            <h3>Long-term Goals (Q3 2025 and beyond)</h3>
-            <p>Mass Adoption and Ecosystem Growth</p>
-            <ul>
-                <li>Develop CosmicCoin blockchain ecosystem with decentralized finance (DeFi) solutions</li>
-                <li>Implement cross-chain interoperability with Ethereum, Polygon, and other blockchains</li>
-                <li>Achieve mass adoption in e-commerce, DeFi, and gaming sectors</li>
-                <li>Continuously improve security, scalability, and usability</li>
-            </ul>
+                <div class="relative pl-8 border-l-2 border-accent">
+                    <div class="absolute w-4 h-4 bg-accent rounded-full -left-[9px] top-1"></div>
+                    <h3 class="text-2xl font-semibold text-secondary mb-2">Long-term Goals (Q3 2025 and beyond)</h3>
+                    <p class="font-semibold mb-2">Mass Adoption and Ecosystem Growth</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Develop CosmicCoin blockchain ecosystem with decentralized finance (DeFi) solutions</li>
+                        <li>Implement cross-chain interoperability with Ethereum, Polygon, and other blockchains</li>
+                        <li>Achieve mass adoption in e-commerce, DeFi, and gaming sectors</li>
+                        <li>Continuously improve security, scalability, and usability</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="community" class="card">
-            <h2>Join Our Community</h2>
-            <p>Stay connected with the CosmicCoin community:</p>
-            <ul>
-                <li><a href="https://www.x.com/MirakleGroup">Twitter</a></li>
-                <li><a href="https://t.me/CosmicCoin11">Telegram</a></li>
-                <li><a href="https://discord.com/invite/vBa8f2Pa">Discord</a></li>
-            </ul>
-            <h3>Upcoming Events</h3>
-            <ul>
+        <section id="community" class="bg-gray-800 rounded-lg p-8 mb-8 shadow-lg">
+            <h2 class="text-3xl font-bold text-accent mb-4">Join Our Community</h2>
+            <p class="mb-4">Stay connected with the CosmicCoin community:</p>
+            <div class="flex flex-wrap gap-4 mb-8">
+                <a href="https://www.x.com/MirakleGroup" class="flex items-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                    Twitter
+                </a>
+                <a href="https://t.me/CosmicCoin11" class="flex items-center bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.654-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                    </svg>
+                    Telegram
+                </a>
+                <a href="https://discord.com/invite/vBa8f2Pa" class="flex items-center bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                    Discord
+                </a>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-secondary mb-4">Upcoming Events</h3>
+            <ul class="list-disc list-inside space-y-2 mb-4">
                 <li>Stay tuned for CosmicCoin (COS) updates!</li>
                 <li>Get ready for a journey to the cosmos!</li>
-                <li>For inquiries, partnerships, or more information, email us at:
-                    <a href="mailto:Info.Cosmic.cos@gmail.com">Info.Cosmic.cos@gmail.com</a>
-                </li>
             </ul>
+            <p>For inquiries, partnerships, or more information, email us at:
+                <a href="mailto:Info.Cosmic.cos@gmail.com" class="text-accent hover:underline">Info.Cosmic.cos@gmail.com</a>
+            </p>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 CosmicCoin. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 CosmicCoin. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a simple animation to the floating coin in the header
+        const floatingCoin = document.querySelector('.float-animation');
+        floatingCoin.addEventListener('mouseover', () => {
+            floatingCoin.style.animation = 'none';
+            setTimeout(() => floatingCoin.style.animation = '', 10);
+        });
+    </script>
 </body>
 
-                    </html>
+</html>
